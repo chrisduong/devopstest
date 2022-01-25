@@ -8,4 +8,9 @@ DevOps test website
 
 ### 1. Create the EKS cluster
 
-### 2. Deploy the Nginx Server
+```sh
+eksctl create cluster --region eu-central-1 \
+  --instance-types t3.micro
+```
+
+### 2. Deploy the static Web Server
