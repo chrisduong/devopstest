@@ -16,10 +16,18 @@ docker build -t=chrisduong/go-static-web-server .
 
 ## EKS cluster
 
+Create the Fargate EKS cluster.
+
+```sh
+eksctl create cluster --region eu-central-1 \
+  --fargate --instance-types t3.micro
+  --name test-cluster #amazing-painting-1643191889
+```
+
 Get the current iamidentitymapping.
 
 ```sh
-eksctl get iamidentitymapping --cluster attractive-painting-1643104019
+eksctl get iamidentitymapping --cluster amazing-unicorn-1643190291
 ```
 
 Create `admin` user for the deployment.
